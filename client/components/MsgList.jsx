@@ -25,7 +25,7 @@ const MsgList = () => {
       timestamp: Date.now(),
       text: `${msgs.length + 1} ${text}`,
     };
-    originalMsgs.unshift(newMsg);
+    setMsgs([newMsg, ...msgs]);
   };
 
   const onUpdate = (text, id) => {

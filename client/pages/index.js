@@ -1,10 +1,16 @@
-const { default: MsgList } = require("../components/MsgList");
+import dynamic from "next/dynamic";
 
-const Home = () => (
-  <>
-    <h1>SIMPLE SNS</h1>
-    <MsgList />
-  </>
-);
+const DynamicMsgList = dynamic(() => import("../components/MsgList"), {
+  ssr: false,
+});
+
+const Home = () => {
+  return (
+    <>
+      <h1>SIMPLE SNS</h1>
+      <DynamicMsgList />
+    </>
+  );
+};
 
 export default Home;

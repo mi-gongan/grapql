@@ -1,1 +1,8 @@
-{}
+{
+  "index.js -> ../components/MsgList": {
+    "id": "index.js -> ../components/MsgList",
+    "files": [
+      "static/chunks/components_MsgList_jsx.js"
+    ]
+  }
+}
