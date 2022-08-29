@@ -14,6 +14,10 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.send("ok");
+});
+
 const routes = [...messagesRoute, ...usersRoute];
 
 routes.forEach(({ method, route, handler }) => {
